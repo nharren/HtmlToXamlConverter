@@ -27,18 +27,6 @@
     <Reference Include="UIAutomationTypes" />
   </ItemGroup>
   <ItemGroup>
-    <ApplicationDefinition Include="MyApp.xaml">
-      <SubType>
-      </SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </ApplicationDefinition>
-    <Page Include="Window1.xaml">
-      <SubType>
-      </SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="HtmlCssParser.cs" />
     <Compile Include="HtmlFromXamlConverter.cs" />
     <Compile Include="HtmlLexicalAnalyzer.cs" />
@@ -46,13 +34,5 @@
     <Compile Include="HtmlSchema.cs" />
     <Compile Include="HtmlTokenType.cs" />
     <Compile Include="HtmlToXamlConverter.cs" />
-    <Compile Include="MyApp.xaml.cs">
-      <DependentUpon>MyApp.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Window1.xaml.cs">
-      <DependentUpon>Window1.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
   </ItemGroup>
 </Project>
