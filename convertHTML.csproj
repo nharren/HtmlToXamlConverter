@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
   <PropertyGroup>
     <AssemblyName>XAMLConverter</AssemblyName>
     <TargetType>winexe</TargetType>
@@ -7,9 +7,15 @@
     <SchemaVersion>2.0</SchemaVersion>
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <ProjectGuid>{E1F3F7A0-5FE8-447D-B2EE-065B770B0712}</ProjectGuid>
+    <TargetFrameworkVersion>v3.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <Import Project="$(MSBuildBinPath)\Microsoft.WinFX.targets" />
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
@@ -24,10 +30,12 @@
     <ApplicationDefinition Include="MyApp.xaml">
       <SubType>
       </SubType>
+      <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
     <Page Include="Window1.xaml">
       <SubType>
       </SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
