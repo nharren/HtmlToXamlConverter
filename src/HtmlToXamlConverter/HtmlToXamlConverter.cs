@@ -2011,6 +2011,9 @@ namespace HTMLConverter
                     case "font-weight":
                         xamlElement.SetAttribute(Xaml_FontWeight, (string)propertyEnumerator.Value);
                         break;
+                    case "baseline-alignment":
+                        xamlElement.SetAttribute(Xaml_BaselineAlignment, (string)propertyEnumerator.Value);
+                        break;
                     case "font-size":
                         //  Convert from css size into FontSize
                         xamlElement.SetAttribute(Xaml_FontSize, (string)propertyEnumerator.Value);
@@ -2356,8 +2359,10 @@ namespace HTMLConverter
                     localProperties["text-align"] = "Left";
                     break;
                 case "sub":
+                    localProperties["baseline-alignment"] = "Subscript";
                     break;
                 case "sup":
+                    localProperties["baseline-alignment"] = "Superscript";
                     break;
 
                 // Hyperlinks
@@ -2642,6 +2647,8 @@ namespace HTMLConverter
 
         public const string Xaml_TextIndent = "TextIndent";
         public const string Xaml_TextAlignment = "TextAlignment";
+
+        public const string Xaml_BaselineAlignment = "BaselineAlignment";
 
         // ---------------------------------------------------------------------
         //
